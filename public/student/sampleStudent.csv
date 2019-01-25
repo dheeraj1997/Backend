@@ -1,0 +1,4 @@
+studentAdhaar,studentName,gender,nationality,dob,admissionNumber,srNumber,rollNumber,admissionType,guardianAdhaar,guardianName,relation,contactNo,religion,caste,emailId,pin,completeAddress,isHandicaped,motherName,motherOccupation,fatherName,fatherOccupation,height,weight,bloodGroup
+123456789222,Abhivendra,m,indian,27-3-1987,611,1232,3,paid,123412000000,XYSSSSS,mother,8130114719,hindu,obc,nishant@usa.com,226001,near mandawali fort lucknow,no,Mrs. A,housewife,Mr. A,teacher,171,76,O+ve
+222222233222,Nishant Mishra,f,other,27-3-1987,711,2346,4,free,111111111111,Nishant,father,7071742194,muslim,general,n@inforida.com,223210,xkxckxckjcf  djfkdjfk  df,no,Mrs. B,housewife,Mr. R,teacher,176,45,B+ve
+333333333399,Animesh Mahra,o,indian,26-7-1989,911,4567,5,paid,345678912333,xyzzz,other,9335992323,other,other,n@n.com,226020,"near tarun market, lucknow",no,Mrs. C,housewife,Mr. S,teacher,167,73,AB-

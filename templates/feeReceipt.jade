@@ -1,0 +1,119 @@
+doctype html
+head
+    style.
+        body {
+            font-family: Sans-serif;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 5px;
+            text-align: left;
+        }
+div
+    div(style='float:left;display: block; width: 90%; margin:0% 5%;')
+        p(style='text-align: center;') Fee Reciept (Student Copy)
+        h1(style='text-align: center;') #{schoolName}
+        h4(style='text-align: center;')
+            | #{schoolAddress}
+            br
+            | Contact:+91-#{schoolPhone}, Email:
+            |             #{schoolEmail}
+        hr
+    div(style='float:left;display: block; width: 90%; margin:0% 5%;')
+        div(style='float:left; width: 50%; display: inline-block;')
+            p
+                b Reciept No:
+                |  #{recNo}
+                br
+                b Student Name:
+                |  #{studentName} (#{studentClass})
+        div(style='float:left; width: 50%; display: inline-block;')
+            p(style='text-align: left; position: absolute; right: 13%;')
+                b Dated:
+                |  #{date}
+                br
+                b Guardian Name:
+                |  #{guardianName}
+    div(style='float:left;display: block; width: 90%; margin:0% 5%;')
+        table(style='width:100%')
+            tr
+                th Particulars
+                th Amount
+            each per in particular
+                tr
+                    td #{per.particular}(#{per.month})
+                    td ₹#{per.amount}
+            tr
+                td(colspan='2')  
+            tr
+                td
+                    b Total
+                td ₹#{total}
+            tr
+                td
+                    b Payment Type
+                td #{payType}
+    div(style='float:left;display: block; width: 90%; margin:0% 5%;')
+        p
+            b Fees Collected By:
+            |   #{collectedBy}
+        p
+            b Authorised Signatory:
+    div(style='float:left;display: block; width: 90%; margin:0px 5% 100px 5%;')
+hr
+div
+    div(style='float:left;display: block; width: 90%; margin:0% 5%;')
+        p(style='text-align: center;') Fee Reciept (Office Copy)
+        h1(style='text-align: center;') #{schoolName}
+        h4(style='text-align: center;')
+            | #{schoolAddress}
+            br
+            | Contact:+91-#{schoolPhone}, Email:
+            |             #{schoolEmail}
+        hr
+    div(style='float:left;display: block; width: 90%; margin:0% 5%;')
+        div(style='float:left; width: 50%; display: inline-block;')
+            p
+                b Reciept No:
+                |  #{recNo}
+                br
+                b Student Name:
+                |  #{studentName} (#{studentClass})
+        div(style='float:left; width: 50%; display: inline-block;')
+            p(style='text-align: left; position: absolute; right: 13%;')
+                b Dated:
+                |  #{date}
+                br
+                b Guardian Name:
+                |  #{guardianName}
+    div(style='float:left;display: block; width: 90%; margin:0% 5%;')
+        table(style='width:100%')
+            tr
+                th Particulars
+                th Amount
+            each per in particular
+                tr
+                    td #{per.particular}(#{per.month})
+                    td ₹#{per.amount}
+            tr
+                td(colspan='2')  
+            tr
+                td
+                    b Total
+                td ₹#{total}
+            tr
+                td
+                    b Payment Type
+                td #{payType}
+    div(style='float:left;display: block; width: 90%; margin:0% 5%;')
+        p
+            b Fees Collected By:
+            |   #{collectedBy}
+        p
+            b Authorised Signatory:
+    div(style='float:left;display: block; width: 90%; margin:0px 5% 100px 5%;')

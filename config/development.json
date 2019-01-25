@@ -1,0 +1,65 @@
+{
+  "general": {
+    "port": "10000"
+  },
+  "mongoConfig": {
+    "host": "localhost",
+    "port": "27017"
+  },
+  "inforidaSqlConfig": {
+    "host": "localhost",
+    "port": "8889",
+    "user": "root",
+    "password": "root",
+    "database": "inforida"
+  },
+  "esConfig": {
+    "host": "http://localhost:9200"
+  },
+  "redisConfig": {
+    "host": "localhost",
+    "port": 6379
+  },
+  "log4jConfig": {
+    "auditLogAppender": {
+      "category": "audit",
+      "filename": "logs/audit.log",
+      "pattern": "-yyyy-MM-dd",
+      "type": "console"
+    },
+    "cronLogAppender": {
+      "category": "cron",
+      "filename": "logs/nodeCronLogFile.log",
+      "pattern": "-yyyy-MM-dd",
+      "type": "console"
+    },
+    "dbLogAppender": {
+      "category": "database",
+      "filename": "logs/database.log",
+      "pattern": "-yyyy-MM-dd",
+      "type": "console"
+    },
+    "levels": {
+      "app": "DEBUG",
+      "audit": "DEBUG",
+      "cron": "DEBUG",
+      "database": "DEBUG"
+    },
+    "serverLogAppander": {
+      "category": "app",
+      "filename": "logs/nodeServerLogFile",
+      "pattern": "-yyyy-MM-dd-hh",
+      "type": "console"
+    },
+    "webServiceLogAppender": {
+      "category": "webServiceLogAppender",
+      "filename": "logs/webServiceLogFile",
+      "layout": {
+        "type": "basicLayout"
+      },
+      "pattern": "-yyyy-MM-dd-hh",
+      "type": "dateFile"
+    },
+    "appendConsoleLog": true
+  }
+}

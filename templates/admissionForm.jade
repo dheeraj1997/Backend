@@ -1,0 +1,132 @@
+doctype html
+html
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    head
+        link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css', integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm', crossorigin='anonymous')
+    body
+        .container-fluid
+            .row
+                .col-md-12(style='width: 100%;')
+                    .col-md-4(style='width: 33.3%;float: left; ')
+                        span
+                            b Telephone No:
+                            |  +91-#{schoolPhone}
+                    .col-md-4.text-center(style='width: 33.4%; float: left;')
+                        img.img-fluid(src='#{schoolLogo}', style='max-width: 200px;height:200px;')
+                    .col-md-4(style='width: 33.3%; float: left;')
+                        span(style='float: right;')
+                            b Email:
+                            |  #{schoolEmail}
+                    .col-md-12.text-center(style='width: 100%; float: left;')
+                        p(style='font-size: 25px;text-transform: uppercase;')
+                            b #{schoolName}
+                        p(style='font-size: 12px;text-transform: uppercase;') (Affiliated To #{schoolBoard}, Affilication No:#{schoolCode})
+                        p(style='font-size: 13px;text-transform: uppercase;') #{schoolAddress} - #{schoolPin}
+                        p(style='font-size: 20px;text-transform: uppercase;') ADDMISSION FORM
+                    .col-md-12(style='width: 100%; float: left;')
+                        span(style='font-size: 18px;')
+                            b SR NO:
+                            | #{schoolDetail.srnNo}
+                        span(style='font-size: 18px;float: right;')
+                            b Admission No:
+                            | #{schoolDetail.admissionNumber}
+                    .col-md-8(style='margin-top: 20px; width: 66%; float: left; ')
+                        div(style='text-transform: capitalize;')
+                            h5 basic information
+                            div(style='padding-left: 10px;')
+                                p
+                                    b Aadhaar ID:
+                                    |  #{aadhaarId}
+                                p
+                                    b Student Name:
+                                    |  #{name}
+                                p
+                                    b Date of Birth:
+                                    |  #{dobString}
+                                p
+                                    b gender:
+                                    |  #{gender}
+                                p
+                                    b nationality:
+                                    |  #{nationality}
+                                p
+                                    b religion:
+                                    |  #{religion}
+                                p
+                                    b caste:
+                                    |  #{caste}
+                    .col-md-4(style='margin-top: 20px; width: 34%; float: left;')
+                        img.img-fluid(src='#{picture}', style='max-width: 300px;height:200px; float: right;')
+                    .col-md-8(style='margin-top: 10px;width: 66%; float: left;')
+                        div(style='text-transform: capitalize;')
+                            h5 parents information
+                            div(style='padding-left: 10px;')
+                                p
+                                    b mother's name:
+                                    |  #{motherName}
+                                p
+                                    b mother's occupation:
+                                    |  #{motherOccupation}
+                                p
+                                    b father's name:
+                                    |  #{fatherName}
+                                p
+                                    b father's occupation:
+                                    |  #{fatherOccupation}
+                    .col-md-4(style='margin-top: 10px; width: 34%; float: left;')
+                        div(style='text-transform: capitalize;')
+                            h5 address information
+                            div(style='padding-left: 10px;')
+                                p
+                                    b Address:
+                                    |  #{address.completeAddress}
+                                p
+                                    b pincode:
+                                    |  #{address.pin}
+                    .col-md-8(style='margin-top: 10px;width: 66%; float: left;')
+                        div(style='text-transform: capitalize;')
+                            h5 guardian information
+                            div(style='padding-left: 10px;')
+                                p
+                                    b guardian's aadhaar id:
+                                    |  #{guardianInfo.aadhaarId}
+                                p
+                                    b guardian's name:
+                                    |  #{guardianInfo.name}
+                                p
+                                    b relation with student:
+                                    |  #{guardianInfo.relation}
+                                p
+                                    b contact no:
+                                    |  #{guardianInfo.contactNo}
+                    .col-md-4(style='margin-top: 10px;width: 34%; float: left;')
+                        div(style='text-transform: capitalize;')
+                            h5 admission information
+                            div(style='padding-left: 10px;')
+                                p
+                                    b class:
+                                    |  #{className}
+                                p
+                                    b admission No:
+                                    |  #{schoolDetail.admissionNumber}
+                                p
+                                    b admission date:
+                                    |  #{admissionDateString}
+                                p
+                                    b admission type:
+                                    |  #{schoolDetail.admissionType}
+                    .col-md-8(style='margin-top: 10px;width: 66%; float: left;')
+                        div(style='text-transform: capitalize;')
+                            h5 medical information
+                            div(style='padding-left: 10px;')
+                                p
+                                    b height(in CMs):
+                                    |  #{height}
+                                p
+                                    b weight(in KGs):
+                                    |  #{weight}
+                                p
+                                    b blood Group:
+                                    |  #{bloodGroup}

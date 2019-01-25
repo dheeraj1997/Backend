@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  include fileupload.html
+  //form(name='csvFileUploadForm',action='/api/submit',method='post')
+  //  input(type='text', name='filePath')
+  //  input(type='submit', name='filePath')

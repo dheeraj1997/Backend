@@ -1,0 +1,68 @@
+doctype html
+html
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    head
+        link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css', integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm', crossorigin='anonymous')
+    body
+        .container-fluid
+            .row(style='margin:10px; text-align: center; font-size: 19px;')
+                .col-md-12
+                    table.table.table-bordered
+                        thead
+                            tr
+                                th PERIOD
+                                th MONDAY
+                                th TUESDAY
+                                th WEDNESDAY
+                                th THURSDAY
+                                th FRIDAY
+                                th SATURDAY
+                                th SUNDAY
+                        tbody
+                            each per in periods
+                                tr
+                                    th #{per.period}
+                                    th
+                                        | #{(per.monday && per.monday.subject && per.monday.subject.toUpperCase()) || '-'}
+                                        br
+                                        if per.monday && per.monday.teacher
+                                            small
+                                                | #{per.monday.teacher}
+                                    th
+                                        | #{(per.tuesday && per.tuesday.subject && per.tuesday.subject.toUpperCase()) || '-'}
+                                        br
+                                        if per.tuesday && per.tuesday.teacher
+                                            small
+                                                | #{per.tuesday.teacher}
+                                    th
+                                        | #{(per.wednesday && per.wednesday.subject && per.wednesday.subject.toUpperCase()) || '-'}
+                                        br
+                                        if per.wednesday && per.wednesday.teacher
+                                            small
+                                                | #{per.wednesday.teacher}
+                                    th
+                                        | #{(per.thursday && per.thursday.subject && per.thursday.subject.toUpperCase()) || '-'}
+                                        br
+                                        if per.thursday && per.thursday.teacher
+                                            small
+                                                | #{per.thursday.teacher}
+                                    th
+                                        | #{(per.friday && per.friday.subject && per.friday.subject.toUpperCase()) || '-'}
+                                        br
+                                        if per.friday && per.friday.teacher
+                                            small
+                                                | #{per.friday.teacher}
+                                    th
+                                        | #{(per.saturday && per.saturday.subject && per.saturday.subject.toUpperCase()) || '-'}
+                                        br
+                                        if per.saturday && per.saturday.teacher
+                                            small
+                                                | #{per.saturday.teacher}
+                                    th
+                                        | #{(per.sunday && per.sunday.subject && per.sunday.subject.toUpperCase()) || '-'}
+                                        br
+                                        if per.sunday && per.sunday.teacher
+                                            small
+                                                | #{per.sunday.teacher}

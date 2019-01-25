@@ -1,0 +1,60 @@
+doctype html
+html
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    head
+        link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css', integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm', crossorigin='anonymous')
+    body
+        each group in studentList
+            .container-fluid(style='margin-top: 10px;')
+                each rowData in group
+                    .row
+                        each student in rowData
+                            div(style='border: solid black 1px; height: 378.1px; width:600px; margin: 10px;')
+                                div(style='width: 100%;background: #3183b3;height: 120px;padding-left: 0px;')
+                                    .text-center(style='width: 20%; float: left; padding-left:0px; padding-top: 5px;')
+                                        img.img-fluid(src='#{student.schoolLogo}', style='max-width: 110px;height:110px;')
+                                    div(style='width: 80%; float: left; padding-top: 10px;line-height: 1.4; text-align: center;')
+                                        span(style='font-size: 22px;text-transform: uppercase; color:white;')
+                                            b #{student.schoolName}
+                                        br
+                                        span(style='font-size: 14px;color:white;') #{student.schoolAddress} - #{student.schoolPin}
+                                        br
+                                        span(style='font-size: 16px;color:white;')
+                                            b Telephone No:
+                                            |  +91-#{student.schoolPhone}
+                                        br
+                                        span(style='font-size: 16px;color:white;')
+                                            b Email:
+                                            |  #{student.schoolEmail}
+                                div(style='width: 100%;background: white;height: 213px;padding-left: 0px;')
+                                    div(style='width: 70%; float: left; padding-top: 5px; padding-left:5px; line-height: 1.8; text-align: left;')
+                                        span(style='font-size: 19px;color:black;')
+                                            b Name:
+                                            |  #{student.name}
+                                        br
+                                        span(style='font-size: 19px;color:black;')
+                                            b Father's Name:
+                                            |  #{student.fatherName}
+                                        br
+                                        span(style='font-size: 19px;color:black;')
+                                            b DOB:
+                                            |  #{student.dobString}
+                                        br
+                                        span(style='font-size: 19px;color:black;')
+                                            b Class:
+                                            |  #{student.className}
+                                        br
+                                        span(style='font-size: 19px;color:black;')
+                                            b Contact:
+                                            |  +91-#{student.contactNo}
+                                        br
+                                        span(style='font-size: 19px;color:black;')
+                                            b Address:
+                                            |  #{student.address} - #{student.pin}
+                                        br
+                                    .text-center(style='width: 30%; float: left; padding-left:0px; padding-top: 5px;')
+                                        span(style='font-size: 19px;color:black;') 2018-2019
+                                        img.img-fluid(src='#{student.picture}', style='max-width: 170px;height:170px; border: solid #3183b3 1.2px; border-radius: 2px;')
+                .row(style='background: white; height: 160px;')
